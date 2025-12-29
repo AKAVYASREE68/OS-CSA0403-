@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    FILE *fp;
+    char line[200];
+
+    fp = fopen("file.txt", "r");
+
+    while (fgets(line, sizeof(line), fp)) {
+        if (strstr(line, "UNIX"))
+            printf("%s", line);
+    }
+
+    fclose(fp);
+    return 0;
+}
