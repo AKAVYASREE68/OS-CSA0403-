@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int req[3] = {40, 10, 50};
+    int head = 35;
+    int i, total = 0;
+
+    for (i = 0; i < 3; i++) {
+        total = total + abs(req[i] - head);
+        head = req[i];
+    }
+
+    total = total + abs(0 - head);
+    printf("Total head movement = %d\n", total);
+
+    return 0;
+}
